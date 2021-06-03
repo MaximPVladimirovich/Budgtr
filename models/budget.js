@@ -1,4 +1,4 @@
-let data = [
+let budget = [
     {
         date: "April 1",
         name: "Income",
@@ -71,5 +71,5 @@ let data = [
     },
 ];
 
-module.exports = data;
+module.exports = budget;
 

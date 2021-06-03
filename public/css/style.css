@@ -1,0 +1,12 @@
+body {
+  background-color: navajowhite;
+}
+
+#key {
+  font-weight: 600;
+}
+
+#back-btn {
+  height: 40px;
+  width: 100px;
+}
