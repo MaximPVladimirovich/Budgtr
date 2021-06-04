@@ -7,34 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <script defer src="/js/script.js"></script>
-    <title>Budgtr</title>
+    <title>
+        <% budget.name%>
+    </title>
 </head>
 
 <body>
-    <div class="container btn-primary">
-        <h2>
-            <%=budget.name %>
-        </h2>
+    <div class="container">
+        <header>
+            <div id="title">
+                <%=budget.name %>
+            </div>
+        </header>
 
-        <a href="/budget"><button type="button" class="btn back-btn">back</button></a>
+        <div id="main">
 
-        <table id="budgetTb">
-            <% for(let n in budget) { %>
-                <tr>
-                    <td id="key">
-                        <%= n %>
-                    </td>
+            <table id="budgetTb">
+                <% for(let n in budget) { %>
+                    <tr>
+                        <td id="nNname">
+                            <%= n %>
+                        </td>
+                        <td class="name">
+                            <%= budget[n] %>
+                        </td>
+                    </tr>
 
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <%= budget[n] %>
-                    </td>
-                </tr>
-
-                <% } %>
+                    <% } %>
+            </table>
+            <div>
+                <a href="/budget"><button type="button" class="btn back-btn">back</button></a>
+            </div>
+        </div>
+        <%- include(`./partials/footer`) %>
     </div>
+
 </body>
 
 </html>

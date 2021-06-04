@@ -12,22 +12,47 @@
 
 <body>
     <div class="container">
-        <h2>Add a new item</h2>
-        <a href="/budget"><button type="button" class="btn back-btn">back</button></a>
-        <form action="/budget" method="POST">
-            Date: <input type="date" name="date"><br />
-            Name: <input type="text" name="name" /><br />
-            Amount: <input type="number" name="amount" /><br />
-            From: <input type="text" name="from"><br />
-            Tags: <input type="text" name="tags" multiple><br />
-            <input type="submit" value="CREATE NEW ITEM" />
-        </form>
+        <header>
+            <div id="title">Add a new item</div>
+        </header>
+        <div id="main">
 
 
+            <form action="/budget" method="POST">
+                <fieldset>
+                    <div>
+                        <p>Date:</p> <input class="inputField" type="date" name="date" placeholder="date">
+                    </div>
 
+                    <div>
+                        <p>Name:</p> <input class="inputField" type="text" name="name" placeholder="name">
 
+                    </div>
+
+                    <div>
+                        <p>Cost:</p> <input class="inputField" type="number" name="amount" placeholder="cost">
+                    </div>
+
+                    <div>
+                        <p>From:</p> <input class="inputField" type="text" name="from" placeholder="from">
+                    </div>
+
+                    <div>
+                        <p>Tags:</p> <input class="inputField" type="text" name="tags" placeholder="tags" multiple>
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn back-btn"><input type="submit"
+                                value="CREATE NEW ITEM"></button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="newBackBtn">
+                <a href="/budget"><button type="button" class="btn back-btn">back</button></a>
+            </div>
+        </div>
+        <%- include(`./partials/footer`) %>
     </div>
-
 </body>
 
 </html>

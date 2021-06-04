@@ -1,12 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.btn {
+  background-color: rgb(81, 138, 132);
+  color: white;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  box-shadow: inset 0 1px 0 hsl(224, 84%, 74%);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+}
+
 body {
-  background-color: navajowhite;
+  background-color: white;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #key {
   font-weight: 600;
 }
 
-.btn {
-  height: 40px;
-  width: 100px;
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 3fr 50px;
+  gap: 10px;
+  grid-template-areas:
+    "header header header header header header"
+    ". . main main . ."
+    "footer footer footer footer footer footer";
+}
+/* Header */
+header {
+  grid-area: header;
+  place-self: center;
+}
+#title {
+  font-size: 40px;
+}
+
+#coloredRect {
+  background-color: cadetblue;
+  height: 4px;
+  width: 600px;
+}
+
+/* main  */
+#main {
+  border-top: 5px solid cadetblue;
+  grid-area: main;
+  place-self: center;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+  color: cadetblue;
+}
+#date {
+  text-align: center;
+}
+
+.name {
+  border-left: 1px solid lightblue;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#nName {
+  font-weight: 600;
+}
+
+form input {
+  margin-right: 0;
+}
+
+footer {
+  grid-area: footer;
+  background-color: darkgray;
+  height: 100%;
+}
+.text-center {
+  text-align: center;
+
+  margin-top: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset div p {
+  font-size: 14px;
+}
+#newBackBtn {
+  margin-top: 30px;
+}
+
+fieldset div {
+  margin-top: 20px;
+}
+.inputField {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
+
+  padding: 4px;
+  border-style: solid;
+}
+
+fieldset p:last-child {
+  justify-self: center;
 }

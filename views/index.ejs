@@ -11,7 +11,41 @@
 </head>
 
 <body>
-    <%- include(`./partials/indexHeader.ejs`) %>
+    <div class="container">
+        <header>
+
+            <div id="title">Budgtr</div>
+
+        </header>
+
+        <div id="main">
+
+            <div id="budgetTb">
+                <table>
+                    <% budget.forEach(function(expenditure) { %>
+                        <tr id="tableRow">
+                            <td id="date">
+                                <%= expenditure.date %>
+                            </td>
+                            <td class="name">
+                                <% let id=budget.indexOf(expenditure)%>
+                                    <a href="/budget/<%=id%>">
+                                        <%=expenditure.name %>
+                                    </a>
+                            </td>
+                            <td id="amount">
+                                $<%= expenditure.amount %>
+                            </td>
+                        </tr>
+                        <% })%>
+                </table>
+                <div>
+                    <a href="/budget/new"><button type="button" class="btn back-btn">NEW ITEM</button></a>
+                </div>
+            </div>
+        </div>
+        <%- include(`./partials/footer`) %>
+    </div>
 </body>
 
 </html>
