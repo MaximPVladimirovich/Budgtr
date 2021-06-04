@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script defer src="/js/script.js"></script>
+    <title>Add a new item</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Add a new item</h2>
+        <a href="/budget"><button type="button" class="btn back-btn">back</button></a>
+        <form action="/budget" method="POST">
+            Date: <input type="date" name="date"><br />
+            Name: <input type="text" name="name" /><br />
+            Amount: <input type="number" name="amount" /><br />
+            From: <input type="text" name="from"><br />
+            Tags: <input type="text" name="tags" multiple><br />
+            <input type="submit" value="CREATE NEW ITEM" />
+        </form>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

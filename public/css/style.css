@@ -6,7 +6,7 @@ body {
   font-weight: 600;
 }
 
-#back-btn {
+.btn {
   height: 40px;
   width: 100px;
 }

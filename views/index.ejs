@@ -11,32 +11,7 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Budgtr All</h2>
-        <table id="budgetTb">
-            <% budget.forEach(function(expenditure) { %>
-                <tr>
-                    <td>
-                        <%= expenditure.date %>
-                    </td>
-                    <td>
-                        <% let id=budget.indexOf(expenditure)%>
-                            <a href="/budget/<%=id%>">
-                                <%=expenditure.name %>
-                            </a>
-
-                    </td>
-                    <td>
-                        <%= expenditure.amount %>
-                    </td>
-
-                </tr>
-
-                <% })%>
-        </table>
-
-    </div>
-
+    <%- include(`./partials/indexHeader.ejs`) %>
 </body>
 
 </html>

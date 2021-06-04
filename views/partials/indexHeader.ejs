@@ -1,0 +1,32 @@
+<div class="container">
+    <header>
+        <div id="title">Budgtr All</div>
+    </header>
+
+    <div>
+        <a href="/budget/new">
+            <button type="button" class="btn new-btn">
+                NEW ITEM
+            </button>
+        </a>
+    </div>
+    <table id="budgetTb">
+        <% budget.forEach(function(expenditure) { %>
+            <tr>
+                <td>
+                    <%= expenditure.date %>
+                </td>
+                <td>
+                    <% let id=budget.indexOf(expenditure)%>
+                        <a href="/budget/<%=id%>">
+                            <%=expenditure.name %>
+                        </a>
+                </td>
+                <td>
+                    <%= expenditure.amount %>
+                </td>
+            </tr>
+            <% })%>
+    </table>
+
+</div>
